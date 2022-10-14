@@ -13,3 +13,11 @@ main {
 #title {
     max-width: 150px;
 }
+
+#overlay {
+    opacity: 0;
+}
+
+#overlay:hover {
+    opacity: 0.9;
+}
