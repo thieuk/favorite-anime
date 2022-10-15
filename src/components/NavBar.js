@@ -6,7 +6,7 @@ function NavBar(){
             <div className="container-fluid">
                 <h1 className="navbar-brand text-light">Home</h1>
                 <form className="d-flex" role="search">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <input className="form-control me-2 border border-3 border-warning" type="search" placeholder="Search" aria-label="Search"/>
                 </form>
             </div>
         </div>

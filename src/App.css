@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-    color: white;
-}
-
 main {
     max-width: 1135px;
 }
