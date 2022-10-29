@@ -48,7 +48,6 @@ export const animeInfo = [
 
 export const extraInfo = [
     {
-        img: "https://m.media-amazon.com/images/M/MV5BMTYwYjYyZDgtMTQ3My00YTI4LThmZTUtZmU1MjllOWRlOTdhXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
         type: "TV Serie",
         ep: "12",
         source: "Manga",
@@ -57,12 +56,6 @@ export const extraInfo = [
         genres: "Sci-Fi, Mystery, Shounen, Horror, Thriller, Psychological, Suspense",
         producer: "Yuuichi Fukushima",
         director: "Mamoru Kanbe",
-        synopsis: 'Surrounded by a forest and a gated entrance, the Grace Field House is inhabited by orphans happily living together \
-        as one big family, looked after by their "Mama," Isabella. Although they are required to take tests daily, the children are \
-        free to spend their time as they see fit, usually playing outside, as long as they do not venture too far from the orphanage—\
-        a rule they are expected to follow no matter what. However, all good times must come to an end, as every few months, a child \
-        is adopted and sent to live with their new family, never to be heard from again. However, the three oldest siblings have their \
-        suspicions about what is actually happening at the orphanage, and they are about to discover the cruel fate that awaits the \
-        children living at Grace Field, including the twisted nature of their beloved Mama.'
+        synopsis: ''
     }
 ]
