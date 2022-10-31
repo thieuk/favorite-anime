@@ -1,6 +1,6 @@
 import AnimeOverlay from "./AnimeOverlay";
 
-function Anime(props){
+export default function Anime(props){
     return (
         <div className="relative m-3 p-3 w-fit h-fit text-center text-amber-200 shadow-xl rounded-xl">
             <AnimeOverlay />
@@ -10,5 +10,3 @@ function Anime(props){
         </div>
     );
 }
-
-export default Anime;

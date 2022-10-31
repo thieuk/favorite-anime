@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import StudiosInfo from "./StudiosInfo";
 
-function Information(props)
+export default function Information(props)
 {
     return (
         <>
@@ -12,7 +12,13 @@ function Information(props)
                         <p><b className="text-amber-400">Type:</b> {props.type}</p>
                         <p><b className="text-amber-400">Episodes:</b> {props.ep}</p>
                         <p><b className="text-amber-400">Source:</b>{props.source}</p>
-                        <p><b className="text-amber-400">Studios:</b> <Link to="/studio" className="text-amber-300">{props.studio}</Link></p>
+
+                        <div className="tooltip">
+                            <b className="text-amber-400">Studios: </b>
+                            <span className="underline underline-offset-2">{props.studio}</span>
+                            <span className="tooltiptext"><StudiosInfo /></span>
+                        </div>
+
                         <p><b className="text-amber-400">Demographic:</b> {props.demographic}</p>
                         <p><b className="text-amber-400">Genres:</b> {props.genres}</p>
                         <p><b className="text-amber-400">Producer:</b> {props.producer}</p>
@@ -25,5 +31,3 @@ function Information(props)
         </>
     );
 }
-
-export default Information;

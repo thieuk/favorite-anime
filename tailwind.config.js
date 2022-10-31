@@ -9,10 +9,10 @@ module.exports = {
   plugins: [],
   theme: {
     screens: {
-      'xl': {'max': '1125px'},
-      'lg': {'max': '900px'},
-      'md': {'max':  '690px'},
-      'sm': {'max': '460px'},
+      'xl': {'max': '1115px'},
+      'lg': {'max': '910px'},
+      'md': {'max':  '708px'},
+      'sm': {'max': '500px'},
     }
   },
 }

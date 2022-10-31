@@ -1,16 +1,14 @@
 import { animeInfo } from '../exampleInfo';
-import NavBar from '../components/NavBar';
+import HomeNav from '../components/HomeNav';
 import Anime from '../components/Anime';
 import { Link } from 'react-router-dom';
 
-function Home()
+export default function Home()
 {
-    document.body.style.backgroundImage = "none";
-
     return (
         <>
         <nav>
-            <NavBar />
+            <HomeNav />
         </nav>
         <main className="flex flex-wrap m-auto w-[1018px] xl:w-[815px] lg:w-[610px] md:w-[408px] sm:w-[200px]">
             {animeInfo.map((info) => {
@@ -24,5 +22,3 @@ function Home()
         </>
     );
 }
-
-export default Home;

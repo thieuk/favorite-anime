@@ -1,4 +1,4 @@
-function NavBar(){
+export default function HomeNav(){
     const inputStyle = ["rounded", "p-1", "placeholder-neutral-600", "bg-white border-solid", "border-2", 
                         "border-amber-400", "caret-amber-400", "focus:outline-0", "focus:text-amber-400", 
                         "focus:bg-neutral-700", "focus:placeholder-amber-300"].join(" ");
@@ -13,5 +13,3 @@ function NavBar(){
         </div>
     );
 }
-
-export default NavBar;

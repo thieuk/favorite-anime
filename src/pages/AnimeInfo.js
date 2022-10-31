@@ -4,7 +4,7 @@ import Information from '../components/Information';
 import { useLocation  } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-function AnimeInfo()
+export default function AnimeInfo()
 {
     const location = useLocation();
     const { title, image } = location.state;
@@ -26,5 +26,3 @@ function AnimeInfo()
         </div>
     );
 }
-
-export default AnimeInfo;
