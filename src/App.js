@@ -1,15 +1,16 @@
 import './App.css';
-import React, { Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Loading from "./components/Loading";
 
-const Home = React.lazy(() => import('./pages/Home'));
-const AnimeInfo = React.lazy(() => import('./pages/AnimeInfo'));
+const Home = lazy(() => import('./pages/Home'));
+const AnimeInfo = lazy(() => import('./pages/AnimeInfo'));
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/info" element={<AnimeInfo />} />
