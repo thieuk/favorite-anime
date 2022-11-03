@@ -1,3 +1,7 @@
+// this is a temporary file that will be deleted later
+// this file allows me to see what the components would look like with some data
+// later on, the data will be coming from a relational database
+
 export const animeInfo = [
     {
         img: "https://cdn.myanimelist.net/images/about_me/ranking_items/14203345-8cffb697-6736-4bf0-a209-cafb9b70cc88.jpg?t=1660910160",
@@ -34,7 +38,31 @@ export const animeInfo = [
     {
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg",
         title: "Title"
-    }
+    },
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg",
+        title: "Title"
+    },
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg",
+        title: "Title"
+    },
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg",
+        title: "Title"
+    },
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg",
+        title: "Title"
+    },
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg",
+        title: "Title"
+    },
+    {
+        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg",
+        title: "Title"
+    },
 ]
 
 export const extraInfo = [
