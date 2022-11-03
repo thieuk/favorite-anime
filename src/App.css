@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    padding: 50px 0;
+}
+
 main {
     max-width: 1135px;
 }
