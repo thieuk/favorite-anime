@@ -67,14 +67,13 @@ export const animeInfo = [
 
 export const extraInfo = [
     {
-        type: "TV Serie",
-        ep: "12",
+        type: "TV Series",
+        premiered: "2019",
         source: "Manga",
         studio: "CloverWorks",
-        demographic: "Shounen",
+        duration: "22 min. per ep.",
         genres: "Sci-Fi, Mystery, Shounen, Horror, Thriller, Psychological, Suspense",
-        producer: "Yuuichi Fukushima",
-        director: "Mamoru Kanbe",
-        synopsis: ''
+        producers: "Aniplex, Dentsu, Fuji TV, Shueisha, CA-Cygames Anime Fund",
+        summary: "At Grace Field House, life couldn't be better for the orphans! Though they have no parents, together with the other kids and a kind Mama who cares for them, they form one big, happy family. No child is ever overlooked, especially since they are all adopted by the age of 12. Their daily lives involve rigorous tests, but afterwards, they are allowed to play outside. There is only one rule they must obey: do not leave the orphanage. But one day, two top-scoring orphans, Emma and Norman, venture past the gate and unearth the harrowing secret behind their entire existence. Utilizing their quick-wittedness, the children must work together to somehow change their predetermined fate."
     }
 ]

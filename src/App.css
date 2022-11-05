@@ -28,6 +28,7 @@ main {
 
 .tooltip {
     position: relative;
+    min-width: 200px;
 }
 
 .tooltip .tooltiptext {
