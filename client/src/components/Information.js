@@ -6,7 +6,7 @@ export default function Information(props)
     return (
        <div className="info m-auto text-amber-300">
             <div className="flex-container flex m-auto">
-                <img className="w-[245px] h-[350px] shadow-xl" src={props.img} alt="anime cover" />
+                <img className="w-[245px] h-[350px] shadow-xl" src={require("../images/thumbnails/" + props.img)} alt="anime cover" />
                 <ul className="textShadow">
                     <li><b>Title:</b> {props.name}</li>
                     <li><b>Type:</b> {props.type}</li>

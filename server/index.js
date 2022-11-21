@@ -14,8 +14,16 @@ const db = mysql.createConnection({
 app.use(express.json());
 app.use(cors());
 
-app.get("/info", (rep, res) => {
+app.get("/", (req, res) => {
     const q = "SELECT * FROM anime.info";
+    db.query(q, (err, data) => {
+        if (err) return res.json(err);
+        return res.json(data);
+    });
+});
+
+app.get("/info/:title", (req, res) => {
+    const q = `SELECT * FROM anime.info WHERE title="${req.params.title}"`;
     db.query(q, (err, data) => {
         if (err) return res.json(err);
         return res.json(data);
