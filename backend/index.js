@@ -5,17 +5,17 @@ import cors from 'cors';
 const app = express();
 
 const db = mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"D@tabas3*S&T",
-    database:"anime"
+    host:"sql9.freesqldatabase.com",
+    user:"sql9580230",
+    password:"sZLBxRiCru",
+    database:"sql9580230"
 });
 
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    const q = "SELECT * FROM anime.info";
+    const q = "SELECT * FROM sql9580230.info";
     db.query(q, (err, data) => {
         if (err) return res.json(err);
         return res.json(data);
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/info/:title", (req, res) => {
-    const q = `SELECT * FROM anime.info WHERE title="${req.params.title}"`;
+    const q = `SELECT * FROM sql9580230.info WHERE title="${req.params.title}"`;
     db.query(q, (err, data) => {
         if (err) return res.json(err);
         return res.json(data);
