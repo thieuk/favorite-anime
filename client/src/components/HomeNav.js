@@ -9,7 +9,7 @@ export default function HomeNav(){
             <form className="absolute right-10 m-2">
                 <input className={inputStyle} type="search" placeholder="Search" aria-label="Search"/>
             </form>
-            <img src={require("../images/searchIcon.png")} alt="search icon" className="absolute w-[35px] h-[35px] right-0 m-2" />
+            <img src={require("../images/icons/searchIcon.png")} alt="search icon" className="absolute w-[35px] h-[35px] right-0 m-2" />
         </div>
     );
 }
