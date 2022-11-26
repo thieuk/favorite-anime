@@ -31,7 +31,7 @@ export default function AnimeInfo()
             <nav className="w-full fixed top-0 h-[50px] bg-neutral-900">
                 <div className="w-fit">
                     <Link to="/" className>
-                        <img className="w-[35px] h-[35px] m-2" src={require("../images/icons/backIcon.png")} alt="go back icon"/>
+                        <img className="w-[30px] h-[30px] m-2" src={require("../images/icons/backIcon.png")} alt="go back icon"/>
                     </Link>
                 </div>
             </nav>

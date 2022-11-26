@@ -13,13 +13,7 @@ export default function Information(props)
                     <li><b>Premiered:</b> {props.premiered}</li>
                     <li><b>Source:</b> {props.source}</li>
                     <li><b>Duration:</b> {props.duration}</li>
-
-                    <li className="tooltip w-fit">
-                        <b>Studio: </b>
-                        <span className="underline underline-offset-2">{props.studio}</span>
-                        <span className="tooltiptext"><StudiosInfo /></span>
-                    </li>
-
+                    <li><b>Studio: </b> <StudiosInfo studio={props.studio}/></li>
                     <li><b>Genres:</b> {props.genres}</li>
                     <li><b>Producers:</b> {props.producers}</li>
                 </ul>

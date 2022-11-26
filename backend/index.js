@@ -30,6 +30,14 @@ app.get("/info/:title", (req, res) => {
     });
 });
 
+app.get("/studio/:studio", (req, res) => {
+    const q = `SELECT * FROM sql9580230.studio WHERE name="${req.params.studio}"`;
+    db.query(q, (err, data) => {
+        if (err) return res.json(err);
+        return res.json(data);
+    });
+});
+
 app.listen(8800, () => {
     console.log("Connnected to Backend!");
 });
