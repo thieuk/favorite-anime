@@ -30,7 +30,7 @@ export default function Home()
         <>
             <nav className="bg-neutral-900 fixed top-0 z-50 w-full h-[50px]">
                 <h1 className="text-amber-400 absolute left-0 m-2">Home</h1>
-                <form className="absolute right-10 m-2">
+                <form className="absolute right-10 m-2" onSubmit={e => { e.preventDefault(); }}>
                     <input className={inputStyle} type="search" placeholder="Search" aria-label="Search" onChange={(e) => setQuery(e.target.value.toLowerCase())}/>
                 </form>
                 <img src={require("../images/icons/searchIcon.png")} alt="search icon" className="absolute w-[35px] h-[35px] right-0 m-2" />
@@ -38,7 +38,7 @@ export default function Home()
 
             <main className="flex flex-wrap m-auto w-[1018px] xl:w-[815px] lg:w-[610px] md:w-[408px] sm:w-[200px]">
                 {home.filter((data) => data.title.toLowerCase().includes(query)).map((info) => (
-                    <Link to="/info" state={{title: info.title, image: info.thumbnails}} className="no-underline">
+                    <Link to="/info" key={info.title} state={{title: info.title, image: info.thumbnails}} className="no-underline">
                         <Anime key={info.title} title={info.title} img={info.thumbnails} />
                     </Link>
                 ))}

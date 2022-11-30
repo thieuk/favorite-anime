@@ -37,12 +37,12 @@ export default function StudiosInfo(props) {
                         onClick={hideStudioInfo} />
                     
                     {studio.map((info) => (
-                        <>
+                        <div key={info.name}>
                             <img className="!m-auto !w-[150px] !h-[150px] md:!w-[100px] md:!h-[100px] !mb-4" src={require("../images/studiosLogos/" + info.logo)} alt="studio logo" />
                             <p>Established: {info.established}</p> <br />
                             <p>Location(s): {info.location}</p> <br />
                             <p>Founder(s): {info.founder}</p>
-                        </>
+                        </div>
                     ))}
                 </div>
             </div>
