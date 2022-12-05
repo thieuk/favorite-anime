@@ -4,38 +4,43 @@ import cors from 'cors';
 
 const app = express();
 
-const db = mysql.createConnection({
-    host:"sql9.freesqldatabase.com",
-    user:"sql9580230",
-    password:"sZLBxRiCru",
-    database:"sql9580230"
-});
-
 app.use(express.json());
 app.use(cors());
 
+const db = mysql.createConnection({
+    host:"remotemysql.com",
+    user:"yGqYcXYDYF",
+    password:"hM4DzrXaWa",
+    database:"yGqYcXYDYF"
+});
+
+// store the data locally because the db keep losing connecting after a period of time
+// I tried to fix it but the db said that I don't have the permission to do so
+let info;
+let studio;
+
+db.query("SELECT * FROM yGqYcXYDYF.info", (err, data) => {
+    info = data;
+});
+
+db.query("SELECT * FROM yGqYcXYDYF.studio", (err, data) => {
+    studio = data;
+});
+
+db.end();
+
 app.get("/", (req, res) => {
-    const q = "SELECT * FROM sql9580230.info";
-    db.query(q, (err, data) => {
-        if (err) return res.json(err);
-        return res.json(data);
-    });
+    return res.json(info);
 });
 
 app.get("/info/:title", (req, res) => {
-    const q = `SELECT * FROM sql9580230.info WHERE title="${req.params.title}"`;
-    db.query(q, (err, data) => {
-        if (err) return res.json(err);
-        return res.json(data);
-    });
+    const anime = info.filter(data => data.title.toLowerCase().includes(req.params.title.toLowerCase()));
+    return res.json(anime);
 });
 
 app.get("/studio/:studio", (req, res) => {
-    const q = `SELECT * FROM sql9580230.studio WHERE name="${req.params.studio}"`;
-    db.query(q, (err, data) => {
-        if (err) return res.json(err);
-        return res.json(data);
-    });
+    const stu = studio.filter(data => data.name.toLowerCase().includes(req.params.studio.toLowerCase()));
+    return res.json(stu);
 });
 
 app.listen(8800, () => {
