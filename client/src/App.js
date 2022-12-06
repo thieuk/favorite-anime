@@ -5,6 +5,7 @@ import Loading from "./components/Loading";
 
 const Home = lazy(() => import('./pages/Home'));
 const AnimeInfo = lazy(() => import('./pages/AnimeInfo'));
+const Feedback = lazy(() => import('./pages/Feedback'));
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/info" element={<AnimeInfo />} />
+            <Route path="/feedback" element={<Feedback />} />
           </Routes>
         </Suspense>
       </Router>
