@@ -25,6 +25,10 @@ export default function Feedback() {
             document.getElementById("feedback").style.borderColor = "#fbbf24";
             document.getElementById("feedback").value = "";
             document.getElementById("feedback").placeholder = "Enter Feedback Here";
+
+            document.getElementById("ty").style.display = "inherit";
+
+            setTimeout(() => {  document.getElementById("ty").style.display = "none"; }, 5000);
         }
     };
 
@@ -40,12 +44,13 @@ export default function Feedback() {
 
             <div className="w-fit h-fit m-auto flex justify-center">
                 <div>
-                    <p className="mt-5 mb-2 text-amber-400 textShadow"><b>Feedback: (750 Characters Max)</b></p>
+                    <p className="mt-5 mb-2 text-amber-400 textShadow sm:text-sm"><b>Feedback: (750 Characters Max)</b></p>
                     <textarea id="feedback" className={texareaStyle} type="text" maxLength="750" placeholder="Enter Feedback Here" name="fback"></textarea>
-                    <button className="block m-auto bg-amber-400 p-2 rounded hover:border hover:border-2 hover:border-black" 
+                    <button className="block m-auto p-2 rounded sm:text-xs border border-amber-400 bg-amber-400 hover:bg-neutral-800 hover:text-amber-400 hover:" 
                             onClick={submitFeedback}>
                         <b>Submit Feedback</b>
                     </button>
+                    <p id="ty" className="hidden w-fit ml-auto mr-auto mt-10 text-xl sm:text-sm text-[#00ff3c]"><b>Thank You For Your Feedback.</b></p>
                 </div>
             </div>
         </>
