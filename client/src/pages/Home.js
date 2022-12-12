@@ -16,7 +16,7 @@ export default function Home()
     useEffect(() => {
         const fetchInfo = async() => {
             try {
-                const res = await axios.get("http://localhost:8800/");
+                const res = await axios.get("http://localhost:8800/api/info");
                 setHome(res.data);
             }
             catch(err) {

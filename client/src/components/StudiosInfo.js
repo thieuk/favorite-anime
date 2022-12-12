@@ -15,7 +15,7 @@ export default function StudiosInfo(props) {
     useEffect(() => {
         const fetchInfo = async() => {
             try {
-                const res = await axios.get(`http://localhost:8800/studio/${props.studio}`);
+                const res = await axios.get(`http://localhost:8800/api/studio/${props.studio}`);
                 setStudio(res.data);
             }
             catch(err) {

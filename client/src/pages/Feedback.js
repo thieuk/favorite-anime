@@ -14,7 +14,7 @@ export default function Feedback() {
         else {
             const sendInfo = async() => {
                 try {
-                    await axios.post("http://localhost:8800/feedback/", {feedback : document.getElementById("feedback").value});
+                    await axios.post("http://localhost:8800/api/feedback/", {feedback : document.getElementById("feedback").value});
                 }
                 catch(err) {
                     console.log(err);

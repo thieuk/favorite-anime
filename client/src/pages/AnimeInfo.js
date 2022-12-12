@@ -14,7 +14,7 @@ export default function AnimeInfo()
     useEffect(() => {
         const fetchInfo = async() => {
             try {
-                const res = await axios.get(`http://localhost:8800/info/${title}`);
+                const res = await axios.get(`http://localhost:8800/api/info/${title}`);
                 setInfo(res.data);
             }
             catch(err) {

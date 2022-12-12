@@ -1,10 +1,9 @@
-import express, { json } from 'express'
+import express, { application, json } from 'express'
 import mysql from 'mysql'
 import cors from 'cors'
 
 const app = express()
 
-app.use(express.json())
 app.use(cors())
 
 const db_config = {
@@ -18,6 +17,7 @@ let db = mysql.createConnection(db_config)
 
 // store the data locally because the db keep losing connecting after a period of time
 // I tried to fix it but the db said that I don't have the permission to do so
+// I tried making open the db when needed and close connection right after but slowed down the app
 let info
 let studio
 
@@ -32,20 +32,35 @@ db.query("SELECT * FROM yGqYcXYDYF.studio", (err, data) => {
 db.end()
 
 app.get("/", (req, res) => {
-    return res.json(info)
+    const apiInstruction = `
+        <h2>How to fetch data using API:</h2>
+        <p>http://localhost:8800/api/info --> fetch all information in the "info" table</p>
+        <p>http://localhost:8800/api/info/:title --> fetch a specific row in the "info" table</p>
+        <p>http://localhost:8800/api/studio --> fetch all information in the "studio" table</p>
+        <p>http://localhost:8800/api/studio/:name --> fetch a specific row in the "studio" table</p>
+    `
+    res.send(apiInstruction)
 })
 
-app.get("/info/:title", (req, res) => {
-    const anime = info.filter(data => data.title.toLowerCase().includes(req.params.title.toLowerCase()))
-    return res.json(anime)
+app.get("/api/info", (req, res) => {
+    res.send(info)
 })
 
-app.get("/studio/:studio", (req, res) => {
-    const stu = studio.filter(data => data.name.toLowerCase().includes(req.params.studio.toLowerCase()))
-    return res.json(stu)
+app.get("/api/info/:title", (req, res) => {
+    const anime = info.filter(data => data.title.toLowerCase() === req.params.title.toLowerCase())
+    res.send(anime)
 })
 
-app.post("/feedback", (req, res) => {
+app.get("/api/studio", (req, res) => {
+    res.send(studio)
+})
+
+app.get("/api//studio/:studio", (req, res) => {
+    const stu = studio.filter(data => data.name.toLowerCase() === req.params.studio.toLowerCase())
+    res.send(stu)
+})
+
+app.post("/api/feedback", (req, res) => {
     db = mysql.createConnection(db_config)
     db.query("INSERT INTO user_feedback (feedback) VALUES (?)", req.body.feedback)
     db.end()
