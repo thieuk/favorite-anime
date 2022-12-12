@@ -4,6 +4,7 @@ import cors from 'cors'
 
 const app = express()
 
+app.use(express.json())
 app.use(cors())
 
 const db_config = {
@@ -55,7 +56,7 @@ app.get("/api/studio", (req, res) => {
     res.send(studio)
 })
 
-app.get("/api//studio/:studio", (req, res) => {
+app.get("/api/studio/:studio", (req, res) => {
     const stu = studio.filter(data => data.name.toLowerCase() === req.params.studio.toLowerCase())
     res.send(stu)
 })

@@ -38,7 +38,7 @@ export default function Home()
 
             <main className="flex flex-wrap m-auto w-[1018px] xl:w-[815px] lg:w-[610px] md:w-[408px] sm:w-[200px]">
                 {home.filter((data) => data.title.toLowerCase().includes(query)).map((info) => (
-                    <Link to="/info" key={info.title} state={{title: info.title, image: info.thumbnails}} className="no-underline">
+                    <Link to="/info" key={info.title} state={{ title: info.title }} className="no-underline">
                         <Anime key={info.title} title={info.title} img={info.thumbnails} />
                     </Link>
                 ))}
