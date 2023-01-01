@@ -1,5 +1,5 @@
 ## Background
-This is a project I did for my intro to database class. It's a simple full stack website that fetches information from a database and display them on a website.
+This is a project I did for my intro to database class. It's a simple full stack website that fetches information from a database and displays them on a website.
 
 ## How to Run Locally
 
