@@ -1,8 +1,5 @@
-## Note***
-The website no longer work. I used a free online database and I could only use it for 30 days.
-
 ## Background
-This is a project I did for my intro to database class. It's a simple full stack website that fetches information from a database and display them on a website.
+This is a project I did for my intro to database class. It's a simple full stack website that fetches information from a database and displays them on a website.
 
 ## How to Run Locally
 
@@ -14,6 +11,10 @@ You need to install Node.js. Go to this link https://nodejs.org/en/download/ and
 * Type “npm install” to install all dependencies 
 * Go into the “client” directory
 * Type “npm install” to install all dependencies 
+
+### Prepare the database
+* Inside the "backend" directory, there is an sql file. Open MySQL and run the script to create the database with all the info.
+* Go into the index.js file in the "backend" directory and modify the db_config variable to have the correct host, user, and password
 
 ### How to run website 
 * Run the API
