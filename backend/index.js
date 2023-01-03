@@ -8,25 +8,23 @@ app.use(express.json())
 app.use(cors())
 
 const db_config = {
-    host:"remotemysql.com",
-    user:"yGqYcXYDYF",
-    password:"hM4DzrXaWa",
-    database:"yGqYcXYDYF"
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "anime"
 }
 
 let db = mysql.createConnection(db_config)
 
-// store the data locally because the db keep losing connecting after a period of time
-// I tried to fix it but the db said that I don't have the permission to do so
-// I tried making open the db when needed and close connection right after but slowed down the app
+// store the data locally because the db kept losing connecting after a period of time
 let info
 let studio
 
-db.query("SELECT * FROM yGqYcXYDYF.info", (err, data) => {
+db.query("SELECT * FROM anime.info", (err, data) => {
     info = data
 })
 
-db.query("SELECT * FROM yGqYcXYDYF.studio", (err, data) => {
+db.query("SELECT * FROM anime.studio", (err, data) => {
     studio = data
 })
 
